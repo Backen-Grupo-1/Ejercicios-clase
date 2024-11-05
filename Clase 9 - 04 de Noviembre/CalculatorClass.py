@@ -10,3 +10,6 @@ class Calculator:
     
     def multiply(self, a, b):
         return a * b
+    
+    def abso(self, a):
+        return abs(a)
