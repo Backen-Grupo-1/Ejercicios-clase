@@ -58,3 +58,47 @@
 - **Dataframes**: Creación y entendimiento de dataframes.
 - **Archivos y dataframes**: Carga de archivos de datos en dataframes.
 - **Visualización**: Creación de gráficos para visualizar datos.
+
+#### Clase 8 (04 de Noviembre): Pruebas Unitarias con unittest
+
+- **Pruebas unitarias**: Patrones de pruebas y conceptos.
+- **Derivación de casos de prueba**: Clases de equivalencia y valores frontera.
+- **Implementación de pruebas**: Pruebas unitarias con unittest.
+
+---
+
+### Módulo 3: Fundamentos de Desarrollo Ágil.
+
+#### Clase 9 (06 de Noviembre): Introducción a la Programación Avanzada en Python
+
+- **Desarrollo ágil**: Introducción al desarrollo ágil y conceptos.
+- **Scrum**: Introducción al framework y sus componentes.
+
+#### Clase 10 (11 de Noviembre): Visión del Producto e Historias de Usuario
+
+- **Visión del producto**: Visión del product y product owner.
+- **Historias de usuario**: Descripción de requisitos como escenarios.
+
+#### Clase 11 (13 de Noviembre): Refinamiento del Backlog
+
+- **Refinamiento del Backlog**: Principios y técnicas.
+- **Manejo de un Backlog**: Uso de herramientas para backlogs.
+
+#### Clase 12 (18 de Noviembre): Necesidades del cliente
+
+- **Presentación del cliente**: Presentación del cliente y su problema principal.
+- **Trabajo con cliente**: Trabajo grupal directamente con el cliente.
+
+### Módulo 4: Desarrollo Backend en Entornos Python.
+
+#### Clase 13 (20 de Noviembre): Introducción al desarrollo con frameworks
+
+- **Frameworks de desarrollo de aplicaciones**
+- **Tipos de frameworks**
+- **Componentes de una arquitectura web**
+- **Stacks de desarrollo**
+
+#### Clase 14 (25 de Noviembre): Introducción al framework Django
+
+- **Primeros pasos en Django**: Configuración, creación de Aplicaciones y Vistas Básicas con parámetros.
+- **Templates HTML dinámicos, modelos y administrador**: Creación de Vistas dinámicas, introducción a los modelos, migraciones y administración integrada.
