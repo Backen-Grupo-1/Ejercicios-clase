@@ -17,11 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from info import views
+from biblioteca.views import LibroListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('inicio/', views.inicio, name = 'inicio'),
     path('detalles/<str:proyecto>/',views.proyecto),
     path('detalles/',views.proyecto),
-    path('proyecto_v2/<str:nombre>/<str:descripcion>/<str:estado>/', views.proyecto_v2)
+    path('proyecto_v2/<str:nombre>/<str:descripcion>/<str:estado>/', views.proyecto_v2),
+    path('libros/', LibroListView.as_view()),
 ]
