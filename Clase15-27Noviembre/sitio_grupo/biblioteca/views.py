@@ -4,10 +4,21 @@ from .models import Libro, Autor, Genero
 
 class LibroListView(View):
     def get(self, request):
-        # Recuperar todos los libros
-        libros = Libro.objects.values("titulo","genero","autor")
+        libros = Libro.objects.all()
+        
+        libros_data = []
+        for libro in libros:
+            autores = [autor.nombre for autor in libro.autor.all()]
+            genero = libro.genero.nombre if libro.genero else "Sin género"
+            libros_data.append({
+                "titulo": libro.titulo,
+                "genero": genero,
+                "autores": autores
+            })
+        
         response_data = {
             "total": libros.count(),
-            "libros": list(libros)
+            "libros": libros_data
         }
-        return JsonResponse(response_data, safe=False)
+        
+        return JsonResponse(response_data)
