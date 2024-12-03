@@ -12,11 +12,29 @@ class Libro(models.Model):
     fecha_publicacion = models.DateField()
     autor = models.ManyToManyField('Autor')
     genero = models.ForeignKey('Genero', on_delete=models.CASCADE, null=True)
+    num_paginas = models.IntegerField('Numero de paginas', null=True)
     def __str__(self):
         return self.titulo
     
 class Genero(models.Model):
     nombre = models.CharField(max_length=100, unique=True)
+    def __str__(self):
+        return self.nombre
+    
+class Revista(models.Model):
+    FRECUENCIA_OPCIONES = [
+        ('Diaria', 'Diaria'),
+        ('Semanal', 'Semanal'),
+        ('Mensual', 'Mensual'),
+    ]
+    titulo = models.CharField(max_length=100, unique=True)
+    tema = models.CharField(max_length=50, unique=True)
+    frecuencia_publicacion = models.CharField(
+        max_length=10,
+        choices=FRECUENCIA_OPCIONES,
+        verbose_name="Frecuencia de publicación"
+    )
+    num_edicion = models.IntegerField('Numero edicion', null=True)
     def __str__(self):
         return self.nombre
     
