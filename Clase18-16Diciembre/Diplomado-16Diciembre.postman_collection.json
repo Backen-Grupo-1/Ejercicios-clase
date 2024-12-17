@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "c9f9ae03-273d-48e8-8898-0741c404e382",
+		"name": "Diplomado-16Diciembre",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4812802"
+	},
+	"item": [
+		{
+			"name": "books-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 6,\n    \"names\": \"Libro2\",\n    \"publisher\": \"Editorial2\",\n    \"year\": \"2000\",\n    \"edition\": 1,\n    \"authors\": \"Grupo1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reviews-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"review_id\": 2,\n    \"book_id\": 2,\n    \"review\": \"Muy buen libro!\",\n    \"validated\": 0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"review"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lendings-create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\": 2,\n    \"user_id\": 1,\n    \"start_date\": \"today\",\n    \"end_date\": \"tomorrow\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/lending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lending"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "books-get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/book/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"book",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reviews-get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/review/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"review",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lending-get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/lending/2/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lending",
+						"2",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "books-update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Libro6\",\n    \"publisher\": \"Editorial6\",\n    \"year\": \"2000\",\n    \"edition\": 1,\n    \"authors\": \"Grupo1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/book/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"book",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review-update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_id\": \"2\",\n    \"review\": \"Grupo1!!\",\n    \"validated\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/review/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"review",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lending-update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_date\": \"friday\",\n    \"end_date\": \"monday\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/lending/2/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lending",
+						"2",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "books-delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"3\",\n    \"name\": \"Libro2\",\n    \"publisher\": \"Editorial2\",\n    \"year\": \"2000\",\n    \"edition\": 1,\n    \"authors\": \"Grupo1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/book/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"book",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "review-delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"3\",\n    \"name\": \"Libro2\",\n    \"publisher\": \"Editorial2\",\n    \"year\": \"2000\",\n    \"edition\": 1,\n    \"authors\": \"Grupo1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/review/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"review",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lending-delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"3\",\n    \"name\": \"Libro2\",\n    \"publisher\": \"Editorial2\",\n    \"year\": \"2000\",\n    \"edition\": 1,\n    \"authors\": \"Grupo1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/lending/2/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lending",
+						"2",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "books-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reviews-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lending-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/lendings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"lendings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
