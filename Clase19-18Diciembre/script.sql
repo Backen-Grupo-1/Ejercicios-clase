@@ -60,3 +60,23 @@ where
     precio_por_noche > 90;
 
 select sum(duracion) from reserva r;
+
+-- • Incrementa en $10.00 el precio de todas las habitaciones que pertenecen al “Hotel Sol”.
+update habitacion set precio_por_noche = precio_por_noche + 10 where id_hotel = 1
+
+-- • El “Hotel Luna” ahora está ubicado en “Bosque”.
+update hotel set ubicacion= 'Bosque' where id_hotel = 2
+
+-- • Extiende la duración de la reserva de la habitación 101 en 2 días.
+update reserva set duracion = duracion + 2 where id_habitacion = 1
+
+-- • Borra la reserva hecha en la habitación 102.
+delete from reserva where id_habitacion= 2
+-- • Borra todas las habitaciones cuyo precio por noche supere $120.00.
+delete from habitacion where precio_por_noche > 120
+
+-- • Agrega una columna“estado” (tipo BOOLEAN) a la tabla“Habitacion” para indicar si la habitación está disponible o no. Establece un valor por defecto en TRUE.
+alter table habitacion add column estado boolean default true
+
+-- • Cambia el tipo de dato de la columna“duracion” en la table “Reserva” para que acepte decimales (por ejemplo, para medios días).
+alter table reserva alter column duracion type decimal (5,2)
